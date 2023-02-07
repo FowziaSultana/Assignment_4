@@ -1,4 +1,4 @@
-// The mindGame function takes a positive number as input and after a simple simplification it returns the result.
+//Description 1: The mindGame function takes a positive number as input and after a simple simplification it returns the result.
 function mindGame(number)
 {
     if(typeof number != "number" || number<0 )
@@ -14,13 +14,14 @@ function mindGame(number)
 }
 
 
-// The evenOdd Function takes a string as input. Then it checks the length of it, if the length is even it returns even and it the lrngth is odd it returns odd.
+// Description: 2 The evenOdd Function takes a string as input. Then it checks the length of it, if the length is even it returns even and it the lrngth is odd it returns odd.
 function evenOdd(my_string)
 {
-    if(typeof my_string!=='string'){
+    if(typeof my_string!=='string' ){
         return "please give a string an input" ;
     }
     let lengthOfString= my_string.length;
+    
     if(lengthOfString%2 == 0)
     {
         return "even";
@@ -29,24 +30,15 @@ function evenOdd(my_string)
         return "odd";
     }
 }
+
  
 
 
 
 
-// Problem 3: Is Less or Greater than seven
 
 
-
-// তোমাকে একটা function দেওয়া হবে called “isLGSeven()”. এটা ইনপুট হিসেবে একটা number নিবে।  
-
-// এখন তোমার task: তোমাকে ইনপুট ভ্যালু এবং ৭ এর মধ্যে পার্থক্য বের করতে হবে। যদি এই পার্থক্য ৭ এর চেয়ে ছোট হয়, তখন তোমাকে return করতে হবে সেই বিয়োগফল। নাহলে তোমাকে return করতে হবে double of the input। মানে যে সংখ্যা ইনপুট হিসেবে নিয়েছো সেটির দ্বিগুণ।
-// Input : 6// Output: -1
-// Input: -15// Output: -22
-// Input: 15// Output: 30
-
-
-// the isLGSeven() function takes a number as input. It calculates the  difference between the number and 7. If this difference is greater than 7 the function returns double of the difference. else it returns the  difference between 7 and the input;
+//Description 3: The isLGSeven() function takes a number as input. It calculates the  difference between the number and 7. If this difference is greater than 7 the function returns double of the difference. else it returns the  difference between 7 and the input;
 
 
 function isLGSeven(my_number)
@@ -69,8 +61,7 @@ function isLGSeven(my_number)
 
 
 
-
-// The function findingBadData() takes an array as input. Check the array. Counts all the negative numbers in the array. and returns it.
+//Description 4: The function findingBadData() takes an array as input. Check the array. Counts all the negative numbers in the array. and returns it.
 
 function findingBadData(arrayOfNumbers){
     if(Array.isArray(arrayOfNumbers)==false)
@@ -90,13 +81,11 @@ function findingBadData(arrayOfNumbers){
 
 
 
-
-
-// The function gemsToDiamond() takes 3 input which all must be numbers. It converts the numbers into diamonds as given instruction. Then it add all off them. If the sum off all converted number is greater than 2000 then the function will return the sum after deducting 2000 from it. Else it will return the original sum.
+// Description:5 The function gemsToDiamond() takes 3 input which all must be numbers. It converts the numbers into diamonds as given instruction. Then it add all off them. If the sum off all converted number is greater than 2000 then the function will return the sum after deducting 2000 from it. Else it will return the original sum.
 
 function gemsToDiamond(friendOneGems,friendTwoGems, friendThreeGems )
 {
-    if (typeof(friendOneGems)=="number" && typeof(friendTwoGems)=="number" && typeof(friendThreeGems)=="number") {
+    if (typeof(friendOneGems)=="number" && typeof(friendTwoGems)=="number" && typeof(friendThreeGems)=="number" &&friendOneGems>=0 && friendTwoGems>=0 && friendThreeGems>=0) {
     
     let diamondsOfFriendOne=(friendOneGems*21);
     let diamondsOfFriendTwo=(friendTwoGems*32);
@@ -112,8 +101,11 @@ function gemsToDiamond(friendOneGems,friendTwoGems, friendThreeGems )
     }
        
     }
-    
-    return "All three inputs must be  integer"
+    else{
+        return "There should be 3 inputs and all three inputs must be positive integer"
+    }
+  
 
 }
+
 
